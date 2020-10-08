@@ -27,12 +27,19 @@ public class TwoArrayIterTest {
         public static void main(String[] args){
             int n = 10;
             String str[][] = createArray(n);
-            for (int i = 0; i < n; i++) {
-                System.out.println(Arrays.toString(str[i]));
+            for (int j = 0; j < n; j++) {
+                for (int i = 0; i < n; i++) {
+                    System.out.print(str[j][i] + " ");
+                    if (i + j == 9) {
+                        System.out.print(ConosoleColors.BLUE + str[j][i] + " " + ConosoleColors.RESET);
+                    }
+                }
+                System.out.print('\n');
             }
             StringTwoArray s2a = new StringTwoArray(str);
             TwoArrayIterator iter = s2a.createIterator();
-            System.out.println("проверяем итератор, должны перебирать элементы в матрице по диагонали");
+            System.out.println("проверяем работу итератора, ");
+            System.out.println(ConosoleColors.BLUE + "перебор элементов в матрице проходит по диагонали сверху вниз, справа налево " + ConosoleColors.RESET);
             while (iter.hasNext()) {
                 System.out.println(iter.next());
             }

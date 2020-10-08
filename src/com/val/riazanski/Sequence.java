@@ -1,7 +1,5 @@
 package com.val.riazanski;
 
-import java.util.Arrays;
-
 public class Sequence {
     //fields
     private final int[] sequence;

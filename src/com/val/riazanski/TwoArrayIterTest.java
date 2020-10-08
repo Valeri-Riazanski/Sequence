@@ -1,8 +1,5 @@
 package com.val.riazanski;
 
-import java.util.Arrays;
-
-import static java.lang.Math.incrementExact;
 import static java.lang.Math.random;
 
 public class TwoArrayIterTest {
@@ -26,7 +23,7 @@ public class TwoArrayIterTest {
     }
         public static void main(String[] args){
             int n = 10;
-            String str[][] = createArray(n);
+            String[][] str = createArray(n);
             for (int j = 0; j < n; j++) {
                 for (int i = 0; i < n; i++) {
                     System.out.print(str[j][i] + " ");

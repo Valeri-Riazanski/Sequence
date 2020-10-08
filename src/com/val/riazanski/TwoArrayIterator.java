@@ -5,15 +5,15 @@ import java.lang.String;
 
 public class TwoArrayIterator implements Iterator {
         //fields
-        private String[][] str;
-        private int m = 1000;
+        private final String[][] str;
+        private final int m = 1000;
         private int k;
         private int n;
         private int d = 2;
         int in;
         int id = 1;
-        private Sequence sequence = new Sequence(m);
-        private SequenceIterator iter = sequence.createIterator(m);
+        private final Sequence sequence = new Sequence(m);
+        private final SequenceIterator iter = sequence.createIterator(m);
         //constructors
         public TwoArrayIterator(String[][] s) {
             this.str = s;
@@ -34,7 +34,7 @@ public class TwoArrayIterator implements Iterator {
             id++;
             if (id > d * (d - 1) / 2 ) {
                 d++;
-            };
+            }
             return string;
         }
         @Override

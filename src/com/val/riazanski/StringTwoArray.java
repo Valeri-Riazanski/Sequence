@@ -4,7 +4,7 @@ import java.lang.String;
 
     public class StringTwoArray {
         //fields
-        private String[][] str;
+        private final String[][] str;
         //constructors
         public StringTwoArray(String[][] s) {
             this.str = s;

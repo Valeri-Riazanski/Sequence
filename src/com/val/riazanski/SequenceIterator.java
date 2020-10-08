@@ -22,10 +22,6 @@ public class SequenceIterator implements Iterator {
 
     @Override
     public boolean hasNext() {
-        if (position >= seq.length || seq == null) {
-            return false;
-        } else {
-            return true;
-        }
+        return position < seq.length && seq != null;
     }
 }
